@@ -1,8 +1,8 @@
 console.log("js page linked");
-var x = 0;
 
 function setup() {
-	createCanvas(600, 600);
+	createCanvas(windowWidth, windowHeight);
+	noFill();
 }
 
 
@@ -15,10 +15,17 @@ function draw(){
 	// 	stroke(i/width * 255); 
 	// 	line(i, 0, i, height);
 	// }
+	var count = 0;
+	for (var x=50; x<=width-50; x+=50){
+		for (var y=50; y<=height-50; y+=50){
+			//vanishing point
+			strokeWeight(count*0.02);
+			line(x, y, width/2, height/2);
+			count++;
 
-	for (var i=0; i<width; i+=50){
-		for (var j=0; j<height; j+=50){
-			ellipse(i, j, 20, 20);
+			//gird of X's
+			// line(x-5, y-5, x+5, y+5);
+			// line(x+5, y-5, x-5, y+5);
 		}
 	}
 }
