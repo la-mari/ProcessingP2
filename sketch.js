@@ -70,43 +70,45 @@ function draw(){
 	}
 
 	else if(option==6){
+	w = width/1024;
+	h = height/768;
 	background(209, 255, 45);
 
 	//leftdino
 	beginShape();
 	fill(255, 191, 0);
-	vertex(100, 240);
-	vertex(200, 180);
-	vertex(220, 120);
-	vertex(160, 40);
-	vertex(420, 120);
-	vertex(320, 160);
-	vertex(400, 180);
-	vertex(280, 200);
-	vertex(260, 240);
+	vertex(100*w, 240*h);
+	vertex(200*w, 180*h);
+	vertex(220*w, 120*h);
+	vertex(160*w, 40*h);
+	vertex(420*w, 120*h);
+	vertex(320*w, 160*h);
+	vertex(400*w, 180*h);
+	vertex(280*w, 200*h);
+	vertex(260*w, 240*h);
 	endShape();
 	fill(255, 255, 255);
-	ellipse (305, 118, 40, 20);
+	ellipse (305*w, 118*h, 40*w, 20*h);
 	fill(0);
-	ellipse(310, 120, 16, 16);
+	ellipse(310*w, 120*h, 16*w, 16*h);
 
 	// rightdino
 	fill(0, 182, 255);
 	beginShape();
-	vertex(740, 240);
-	vertex(720, 180);
-	vertex(580, 160);
-	vertex(680, 140);
-	vertex(500, 100);
-	vertex(840, 20);
-	vertex(780, 100);
-	vertex(820, 180);
-	vertex(920, 240);
+	vertex(740*w, 240*h);
+	vertex(720*w, 180*h);
+	vertex(580*w, 160*h);
+	vertex(680*w, 140*h);
+	vertex(500*w, 100*h);
+	vertex(840*w, 20*h);
+	vertex(780*w, 100*h);
+	vertex(820*w, 180*h);
+	vertex(920*w, 240*h);
 	endShape();
 	fill(255, 255, 255);
-	ellipse(695, 93, 20, 30)
+	ellipse(695*w, 93*h, 20*w, 30*h)
 	fill(0)
-	ellipse(693, 101, 16, 16)
+	ellipse(693*w, 101*h, 16*w, 16*h)
 	}
 }
 
