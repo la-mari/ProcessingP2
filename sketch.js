@@ -37,9 +37,15 @@ function draw(){
 				// count++;
 			}
 		}
-
 	}
 
+	else if(option==3){
+		for (var x=50; x<=width-50; x+=50){
+			for (var y=50; y<=height-50; y+=50){
+				ellipse(x, y, 40, 40);
+			}
+		}
+	}
 }
 
 function mousePressed(){
