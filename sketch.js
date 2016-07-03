@@ -10,6 +10,7 @@ function setup() {
 
 function draw(){
 	background(255);
+	var density = map(mouseX, 0, width, 20, 50);
 	// for(var i=0; i<width; i++){
 	// 	//to produce gradient
 	// 	//stroke takes value between 0-255
@@ -18,8 +19,8 @@ function draw(){
 	// }
 
 	if(option==1){
-		for (var x=50; x<=width-50; x+=50){
-			for (var y=50; y<=height-50; y+=50){
+		for (var x=50; x<=width-50; x+=density){
+			for (var y=50; y<=height-50; y+=density){
 		//grid of X's
 			line(x-5, y-5, x+5, y+5);
 			line(x+5, y-5, x-5, y+5);
@@ -29,8 +30,8 @@ function draw(){
 
 	else if(option==2){
 		// var count = 0;
-		for (var x=50; x<=width-50; x+=50){
-			for (var y=50; y<=height-50; y+=50){
+		for (var x=50; x<=width-50; x+=density){
+			for (var y=50; y<=height-50; y+=density){
 				//vanishing point
 				// strokeWeight(count*0.02);
 				line(x, y, width/2, height/2);
@@ -40,16 +41,16 @@ function draw(){
 	}
 
 	else if(option==3){
-		for (var x=50; x<=width-50; x+=50){
-			for (var y=50; y<=height-50; y+=50){
+		for (var x=50; x<=width-50; x+=density){
+			for (var y=50; y<=height-50; y+=density){
 				ellipse(x, y, 40, 40);
 			}
 		}
 	}
 
 	else if(option==4){
-		for (var x=50; x<=width-50; x+=50){
-			for (var y=50; y<=height-50; y+=50){
+		for (var x=50; x<=width-50; x+=density){
+			for (var y=50; y<=height-50; y+=density){
 				for (var i=0; i<16; i+=4){
 					line(x+i, y, x+i, y+12);
 				}
@@ -60,8 +61,8 @@ function draw(){
 
 	else if(option==5){
 		var count = 0;
-		for (var x=50; x<=width-50; x+=50){
-			for (var y=50; y<=height-50; y+=50){
+		for (var x=50; x<=width-50; x+=density){
+			for (var y=50; y<=height-50; y+=density){
 				strokeWeight(count*0.02);
 				ellipse(x, y, 20, 20);
 				count++;
@@ -72,6 +73,7 @@ function draw(){
 	else if(option==6){
 	w = width/1024;
 	h = height/768;
+	noStroke();
 	background(209, 255, 45);
 
 	//leftdino
