@@ -11,7 +11,7 @@ function setup() {
 function draw(){
 	background(255);
 	var density = map(mouseX, 0, width, 20, 50);
-	var density2 = map(mouseY, 0, width, 20, 50);
+	var density2 = map(mouseY, 0, width, 20, 200);
 	// for(var i=0; i<width; i++){
 	// 	//to produce gradient
 	// 	//stroke takes value between 0-255
